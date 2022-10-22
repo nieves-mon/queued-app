@@ -2,12 +2,14 @@
 
 one:
   title: MyString
-  description: MyText
+  notes: MyText
+  due_date: 2022-10-23 01:29:13
   category: one
   user: one
 
 two:
   title: MyString
-  description: MyText
+  notes: MyText
+  due_date: 2022-10-23 01:29:13
   category: two
   user: two
