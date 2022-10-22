@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
     before_action :authenticate_user!
-    before_action :set_category, only: [:show]
+    before_action :set_category, only: [:show, :edit, :update]
 
     def index
         @categories = current_user.categories
@@ -20,6 +20,17 @@ class CategoriesController < ApplicationController
             redirect_to @category
         else
             render :new
+        end
+    end
+
+    def edit
+    end
+
+    def update
+        if @category.update(category_params)
+            redirect_to @category
+        else
+            render :edit
         end
     end
 
