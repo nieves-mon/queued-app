@@ -1,0 +1,43 @@
+<%= form_with model: @task do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+
+    <% task.errors.full_messages.each do |message| %>
+        <div class="error"><%= message %></div>
+    <% end %>
+
+    <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        <% task.errors.full_messages_for(:title).each do |message| %>
+            <div class="error"><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= f.label :category_id %>
+        <%= f.select :category_id, current_user.categories.reduce({}) { |hash, cat| hash[cat.name] = cat.id; hash } %>
+        <% task.errors.full_messages_for(:title).each do |message| %>
+            <div class="error"><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= f.label :notes %>
+        <%= f.text_area :notes %>
+        <% task.errors.full_messages_for(:notes).each do |message| %>
+            <div class="error"><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= f.label :due_date %>
+        <%= f.date_field :due_date %>
+        <% task.errors.full_messages_for(:notes).each do |message| %>
+            <div class="error"><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= f.submit btn_label %>
+    </div>
+<% end %>
