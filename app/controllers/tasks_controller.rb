@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
     before_action :authenticate_user!
-    before_action :set_task, only: [:show, :edit, :update]
-    before_action :set_task_category, only: [:show]
+    before_action :set_task, except: [:new, :create]
+    before_action :set_task_category, only: [:show, :destroy]
 
     def show
     end
@@ -29,6 +29,11 @@ class TasksController < ApplicationController
         else
             render :edit
         end
+    end
+
+    def destroy
+        @task.destroy
+        redirect_to category_url(@task_category)
     end
 
     private
