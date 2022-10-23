@@ -10,5 +10,7 @@
 <ul>
     <% @tasks.each do |task| %>
         <li><%= task.title %>
+            <%= link_to "Show", task_path(task.id) %>
+        </li>
     <% end %>
 </ul>
