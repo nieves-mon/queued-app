@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
     before_action :authenticate_user!
-    before_action :set_task, :set_task_category, only: [:show]
+    before_action :set_task, only: [:show, :edit, :update]
+    before_action :set_task_category, only: [:show]
 
     def show
     end
@@ -16,6 +17,17 @@ class TasksController < ApplicationController
             redirect_to @task
         else
             render :new
+        end
+    end
+
+    def edit
+    end
+
+    def update
+        if @task.update(task_params)
+            redirect_to @task
+        else
+            render :edit
         end
     end
 

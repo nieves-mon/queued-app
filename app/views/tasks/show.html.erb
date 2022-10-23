@@ -3,3 +3,5 @@
 
 <h2>Due Date: <%= @task.due_date.strftime("%^a %b %d, %Y") %></h2>
 <p><%= @task.notes %></p>
+
+<%= link_to "Edit", edit_task_path(@task.id) %>
