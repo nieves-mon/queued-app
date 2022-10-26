@@ -33,10 +33,10 @@
                   <%= link_to "Tasks", tasks_path, class: "nav-link" %>
                 </li>
                 <li class="nav-item right">
-                  <a class="nav-link disabled welcome-user">
+                  <%= link_to edit_user_registration_path, class: "nav-link welcome-user" do %>
                     <i class="bi bi-person-circle"></i>
                     <span>Welcome, <%= current_user.email %>!</span>
-                  </a>
+                  <% end %>
                 </li>
                 <li class="nav-item">
                   <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link logout" %>
