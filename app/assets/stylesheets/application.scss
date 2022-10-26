@@ -22,12 +22,10 @@ $red: #d62828;
 $orange: #f77f00;
 $yellow: #fcbf49;
 
-
 body {
     font-family: 'Lato', sans-serif !important;
     width: 100vw;
     height: 100vh;
-    background: $dark-blue;
 }
 
 @import './categories.scss';
