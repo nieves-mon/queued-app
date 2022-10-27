@@ -1,0 +1,43 @@
+<h1>Tasks</h1>
+
+<h3>Overdue</h3>
+<ul>
+    <% @overdue_tasks.each do |task| %>
+        <li>
+            <%= task.title %>
+            <%= link_to "Show", task_path(task) %>
+            <%= link_to "Edit", edit_task_path(task) %>
+            <%= link_to "Delete", task_path(task), method: :delete, data: {
+                    confirm: "Are you sure"
+            } %>
+        </li>
+    <% end %>
+</ul>
+
+<h3>Today</h3>
+<ul>
+    <% @today_tasks.each do |task| %>
+        <li>
+            <%= task.title %>
+            <%= link_to "Show", task_path(task) %>
+            <%= link_to "Edit", edit_task_path(task) %>
+            <%= link_to "Delete", task_path(task), method: :delete, data: {
+                    confirm: "Are you sure"
+            } %>
+        </li>
+    <% end %>
+</ul>
+
+<h3>Tomorrow</h3>
+<ul>
+    <% @tomorrow_tasks.each do |task| %>
+        <li>
+            <%= task.title %>
+            <%= link_to "Show", task_path(task) %>
+            <%= link_to "Edit", edit_task_path(task) %>
+            <%= link_to "Delete", task_path(task), method: :delete, data: {
+                    confirm: "Are you sure"
+            } %>
+        </li>
+    <% end %>
+</ul>
