@@ -3,9 +3,9 @@ class TasksController < ApplicationController
     before_action :set_task, except: [:index, :new, :create]
 
     def index
-        @overdue_tasks = current_user.tasks.where("due_date < ?", Date.today)
-        @today_tasks = current_user.tasks.where("due_date = ?", Date.today)
-        @tomorrow_tasks = current_user.tasks.where("due_date = ?", DateTime.tomorrow)
+        @overdue_tasks = current_user.tasks.where("due_date < ?", Date.current)
+        @today_tasks = current_user.tasks.where("due_date = ?", Date.current)
+        @tomorrow_tasks = current_user.tasks.where("due_date = ?", Date.tomorrow)
     end
 
     def show
@@ -39,13 +39,13 @@ class TasksController < ApplicationController
     end
 
     def destroy
-        redirect_to category_url(@task.category_id)
         @task.destroy
+        redirect_to category_url(@task.category)
     end
 
     private
         def task_params
-            params.require(:task).permit(:title, :notes, :due_date, :user_id, :category_id)
+            params.require(:task).permit(:title, :notes, :due_date, :category_id)
         end
 
         def set_task
