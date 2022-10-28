@@ -3,8 +3,8 @@ class TasksController < ApplicationController
     before_action :set_task, except: [:index, :new, :create]
 
     def index
-        @overdue_tasks = current_user.tasks.where("due_date < ?", DateTime.current)
-        @today_tasks = current_user.tasks.where("due_date = ?", DateTime.current.to_date)
+        @overdue_tasks = current_user.tasks.where("due_date < ?", Date.today)
+        @today_tasks = current_user.tasks.where("due_date = ?", Date.today)
         @tomorrow_tasks = current_user.tasks.where("due_date = ?", DateTime.tomorrow)
     end
 
