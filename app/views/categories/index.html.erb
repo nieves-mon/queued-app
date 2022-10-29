@@ -1,5 +1,9 @@
 <h1 class="heading-1">All Categories</h1>
-<%= link_to "Create A New Category", new_category_path %>
+<div class="btn center">
+    <%= link_to new_category_path do %>
+        <i class="fa-solid fa-plus"></i> Create A New Category
+    <% end %>
+</div>
 
 <ul>
     <% @categories.each do |category| %>

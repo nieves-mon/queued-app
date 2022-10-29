@@ -2,3 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import './variables.scss';
+
+.btn {
+    background: $yellow;
+    border: 2px solid $yellow;
+    color: white;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
+
+    a {
+        color: white;
+    }
+}
+
+.btn:hover {
+    background: $yellow;
+    box-shadow: 3px 3px 4px #f5b4004d;
+}
