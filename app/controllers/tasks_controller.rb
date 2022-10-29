@@ -5,7 +5,7 @@ class TasksController < ApplicationController
     def index
         @overdue_tasks = current_user.tasks.where("due_date < ?", Date.current)
         @today_tasks = current_user.tasks.where("due_date = ?", Date.current)
-        @future_tasks = current_user.tasks.where.not("due_date < ?", Date.tomorrow)
+        @future_tasks = current_user.tasks.where("due_date > ?", Date.current)
     end
 
     def show
