@@ -2,13 +2,18 @@
 
 .navbar {
     border-bottom: 2px solid $gray;
-    padding: 0.7rem 5rem;
+    padding: 0 5rem;
 }
 
 .navbar-brand {
+    color: $yellow;
     font-size: 1.5rem;
     font-style: italic;
     font-weight: 700;
+}
+
+.navbar-brand:hover {
+    color: $yellow;
 }
 
 .navbar-brand span {
@@ -16,12 +21,15 @@
 }
 
 .nav-link {
-    color: rgba(255, 255, 255, 0.7);
+    color: $white;
     font-size: 1.1rem;
+    padding: 1.3rem 1rem;
+    margin: 0 0.2rem;
 }
 
 .nav-link:hover {
-    color: rgba(255, 255, 255, 0.9);
+    color: white;
+    border-bottom: 1px solid $white;
 }
 
 .welcome-user {
@@ -35,6 +43,7 @@
 
 .logout:hover {
     color: rgb(255, 0, 0);
+    border-bottom: none;
 }
 
 .navbar-nav {
@@ -43,4 +52,9 @@
 
 .right {
     margin-left: auto;
+}
+
+.nav-link.active {
+    color: $yellow !important;
+    border-bottom: 1px solid $yellow;
 }
