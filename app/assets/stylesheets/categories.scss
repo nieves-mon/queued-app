@@ -20,3 +20,41 @@
     background: $yellow;
     box-shadow: 3px 3px 4px #f5b4004d;
 }
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card {
+    background: $gray;
+    max-width: 100%;
+    width: 300px;
+
+    .card-body {
+        padding: 0;
+    }
+
+    .card-title {
+        color: white;
+        padding: 1.5rem 1.5rem 0.5rem;
+        font-size: 2rem;
+    }
+
+    .card-links {
+        border-top: 2px solid $darker-gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .card-link {
+            margin: 0;
+            flex: auto;
+            text-align: center;
+            padding: 0.5rem 0;
+        }
+    }
+}
