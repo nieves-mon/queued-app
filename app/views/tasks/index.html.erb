@@ -28,9 +28,9 @@
     <% end %>
 </ul>
 
-<h3>Tomorrow</h3>
+<h3>Future Tasks</h3>
 <ul>
-    <% @tomorrow_tasks.each do |task| %>
+    <% @future_tasks.each do |task| %>
         <li>
             <%= task.title %>
             <%= link_to "Show", task_path(task) %>
