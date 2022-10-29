@@ -10,8 +10,13 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title"><%= category.name %></h5>
-                <h6 class="card-subtitle mb-2 <%= get_status(category)[:class] %>"><%= get_status(category)[:text] %></h6>
-                <p class="card-text">Pending Tasks: <%= category.tasks.where(completed: false || nil).count %></p>
+                <h6 class="card-subtitle mb-2 <%= get_status(category)[:class] %>">
+                    <%= get_status(category)[:text] %>
+                </h6>
+                <p class="card-text">
+                    <i class="fa-solid fa-list-check"></i>
+                    Pending Tasks: <%= category.tasks.where(completed: false || nil).count %>
+                </p>
                 <div class="card-links">
                     <%= link_to "Show", category_path(category), class: "card-link" %>
                     <%= link_to "Edit", edit_category_path(category), class: "card-link" %>
