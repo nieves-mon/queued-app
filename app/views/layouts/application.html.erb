@@ -46,9 +46,11 @@
             </div>
         </div>
       </nav>
+
+      <div class="main-container">
     <% end %>
 
-
     <%= yield %>
+    <%- '</div>' if user_signed_in?%>
   </body>
 </html>

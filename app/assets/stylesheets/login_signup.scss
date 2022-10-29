@@ -6,13 +6,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: $dark-blue;
+    background: $darker-gray;
 }
 
 .login-signup-container {
-    background: white;
+    background: $dark-gray;
+    border: 2px solid $gray;
     border-radius: 10px;
     box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.1);
+    color: white;
     max-width: 30rem;
     width: 90%;
     padding: 2rem;
@@ -21,11 +23,30 @@
         font-size: 3.5rem;
         font-weight: 700;
         font-style: italic;
+        color: $yellow;
+    }
+
+    h2 {
+        font-weight: 700;
     }
 
     .field,
     input {
         width: 100%;
+    }
+
+    input {
+        background: $light-gray;
+        border: none;
+        border-radius: 5px;
+        color: $white;
+        padding: 0.5rem 1rem;
+        margin-top: 0.5rem;
+        accent-color: $yellow;
+    }
+
+    input:focus {
+        outline: none;
     }
 
     #user_remember_me {

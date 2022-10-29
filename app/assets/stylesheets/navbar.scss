@@ -2,7 +2,7 @@
 
 .navbar {
     padding: 0.7rem 5rem;
-    background: $dark-blue;
+    background: $black;
 }
 
 .navbar-brand {
@@ -30,11 +30,11 @@
 }
 
 .logout {
-    color: rgb(193, 14, 14);
+    color: $light-red;
 }
 
 .logout:hover {
-    color: rgb(255, 0, 0)
+    color: rgb(255, 0, 0);
 }
 
 .navbar-nav {

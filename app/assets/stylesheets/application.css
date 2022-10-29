@@ -30,3 +30,10 @@ a {
 .main-container {
     margin: 1rem 5rem 0;
 }
+
+.heading-1 {
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
