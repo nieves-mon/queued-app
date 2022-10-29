@@ -40,16 +40,20 @@
 
     .card-title {
         color: white;
-        padding: 1.5rem 1.5rem 0.5rem;
+        padding: 1.5rem 1.5rem 0;
         font-size: 2rem;
     }
 
     .card-subtitle {
         font-size: 1rem;
-        margin: 0.5rem 1.5rem 0;
+        margin: 0 1.5rem 0;
         border-radius: 15px;
         padding: 0.3rem 0.7rem;
         width: fit-content;
+    }
+
+    .card-text {
+        margin: 1rem 1.5rem 1rem;
     }
 
     .card-links {
