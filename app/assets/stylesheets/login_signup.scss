@@ -68,7 +68,30 @@
     }
 }
 
+.links {
+    display: flex;
+    flex-direction: row;
+    columns: 2;
+    justify-content: space-between;
+}
+
 .login-signup-link {
+    color: $yellow;
     text-decoration: none;
-    margin: 1.5rem 0;
+}
+
+.login-signup-link:hover {
+    color: $dark-yellow;
+    text-decoration: underline;
+}
+
+.actions input {
+    background: $yellow;
+    border: 2px solid $yellow;
+    color: white;
+    font-weight: 600;
+}
+
+.actions input:hover {
+    box-shadow: 3px 3px 4px #f5b4004d;
 }
