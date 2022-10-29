@@ -1,5 +1,11 @@
 <h1 class="heading-1">All Tasks</h1>
 
+<div class="btn">
+    <%= link_to new_task_path do %>
+        <i class="fa-solid fa-plus"></i> Add A New Task
+    <% end %>
+</div>
+
 <h3>Overdue</h3>
 <ul>
     <% @overdue_tasks.each do |task| %>
