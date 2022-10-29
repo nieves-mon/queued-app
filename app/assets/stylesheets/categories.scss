@@ -44,6 +44,14 @@
         font-size: 2rem;
     }
 
+    .card-subtitle {
+        font-size: 1rem;
+        margin: 0.5rem 1.5rem 0;
+        border-radius: 15px;
+        padding: 0.3rem 0.7rem;
+        width: fit-content;
+    }
+
     .card-links {
         border-top: 2px solid $darker-gray;
         display: flex;
@@ -57,4 +65,22 @@
             padding: 0.5rem 0;
         }
     }
+}
+
+.overdue {
+    color: red;
+    background: rgba(255, 0, 0, 0.1);
+    border: 2px solid red;
+}
+
+.pending {
+    color: orange;
+    background: rgba(255, 166, 0, 0.1);
+    border: 2px solid orange;
+}
+
+.finished {
+    color: green;
+    background: rgba(0, 128, 0, 0.1);
+    border: 2px solid green;
 }
