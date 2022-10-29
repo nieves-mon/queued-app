@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
     before_action :authenticate_user!
-    before_action :set_task, except: [:index, :new, :create]
+    before_action :set_task, only: [:show, :edit, :update, :destroy]
 
     def index
         @overdue_tasks = current_user.tasks.where("due_date < ?", Date.current)
