@@ -2,3 +2,47 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import './variables.scss';
+
+.task-item {
+    background: $gray;
+    color: white;
+    display: grid;
+    grid-template-columns: 1.1fr 0.8fr 1.1fr;
+    grid-template-areas: "label date actions";
+    align-items: center;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+
+    .task-label {
+        grid-area: label;
+        accent-color: $yellow;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .task-title {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .task-due-date {
+        grid-area: date;
+        justify-self: center;
+        margin: 0;
+    }
+
+    .task-actions {
+        grid-area: actions;
+        justify-self: end;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        margin: 0;
+
+        .task-action {
+            margin: 0;
+        }
+    }
+}
