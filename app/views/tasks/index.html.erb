@@ -7,43 +7,10 @@
 </div>
 
 <h3>Overdue</h3>
-<ul>
-    <% @overdue_tasks.each do |task| %>
-        <li>
-            <%= task.title %>
-            <%= link_to "Show", task_path(task) %>
-            <%= link_to "Edit", edit_task_path(task) %>
-            <%= link_to "Delete", task_path(task), method: :delete, data: {
-                    confirm: "Are you sure"
-            } %>
-        </li>
-    <% end %>
-</ul>
+<%= render "tasks", tasks: @overdue_tasks %>
 
 <h3>Today</h3>
-<ul>
-    <% @today_tasks.each do |task| %>
-        <li>
-            <%= task.title %>
-            <%= link_to "Show", task_path(task) %>
-            <%= link_to "Edit", edit_task_path(task) %>
-            <%= link_to "Delete", task_path(task), method: :delete, data: {
-                    confirm: "Are you sure"
-            } %>
-        </li>
-    <% end %>
-</ul>
+<%= render "tasks", tasks: @today_tasks %>
 
 <h3>Future Tasks</h3>
-<ul>
-    <% @future_tasks.each do |task| %>
-        <li>
-            <%= task.title %>
-            <%= link_to "Show", task_path(task) %>
-            <%= link_to "Edit", edit_task_path(task) %>
-            <%= link_to "Delete", task_path(task), method: :delete, data: {
-                    confirm: "Are you sure"
-            } %>
-        </li>
-    <% end %>
-</ul>
+<%= render "tasks", tasks: @future_tasks %>
