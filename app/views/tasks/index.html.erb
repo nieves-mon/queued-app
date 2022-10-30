@@ -6,11 +6,8 @@
     <% end %>
 </div>
 
-<h3>Overdue</h3>
-<%= render "tasks", tasks: @overdue_tasks %>
+<%= render "tasks", tasks: @overdue_tasks, label: "Overdue" %>
 
-<h3>Today</h3>
-<%= render "tasks", tasks: @today_tasks %>
+<%= render "tasks", tasks: @today_tasks, label: "Today" %>
 
-<h3>Future Tasks</h3>
-<%= render "tasks", tasks: @future_tasks %>
+<%= render "tasks", tasks: @future_tasks, label: "Future Tasks" %>
