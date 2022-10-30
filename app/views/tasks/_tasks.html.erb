@@ -4,8 +4,8 @@
     <% tasks.each do |task| %>
         <div class="task-item">
             <div class="task-label">
-                <%= form_with model: @task do |f| %>
-                    <%= f.check_box :completed %>
+                <%= form_with model: task do |f| %>
+                    <%= f.check_box :completed%>
                 <% end %>
                 <h6 class="task-title">
                     <%= task.title%>
