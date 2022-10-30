@@ -1,6 +1,7 @@
 @import './variables.scss';
 
 .navbar {
+    background: $darker-gray;
     border-bottom: 2px solid $gray;
     padding: 0 5rem;
 }
