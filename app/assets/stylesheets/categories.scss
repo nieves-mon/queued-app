@@ -4,7 +4,7 @@
 @import './variables.scss';
 
 .btn {
-    background: $yellow;
+    background: $yellow !important;
     color: white;
     font-weight: 600;
     display: block;
@@ -17,7 +17,6 @@
 }
 
 .btn:hover {
-    background: $yellow;
     box-shadow: 3px 3px 4px #f5b4004d;
 }
 
