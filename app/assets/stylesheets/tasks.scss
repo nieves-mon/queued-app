@@ -3,6 +3,16 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import './variables.scss';
 
+.tasks-group-label {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.tasks-group {
+    margin-bottom: 2rem;
+}
+
 .task-item {
     background: $gray;
     color: white;
