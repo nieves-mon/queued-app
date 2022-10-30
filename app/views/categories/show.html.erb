@@ -7,14 +7,9 @@
 
 <h2>Tasks</h2>
 <%= link_to "Add A Task", new_task_path %>
-<ul>
-    <% @tasks.each do |task| %>
-        <li><%= task.title %>
-            <%= link_to "Show", task_path(task) %>
-            <%= link_to "Edit", edit_task_path(task) %>
-            <%= link_to "Delete", task_path(task), method: :delete, data: {
-                    confirm: "Are you sure"
-            } %>
-        </li>
-    <% end %>
-</ul>
+
+<%= render "tasks", tasks: @overdue_tasks, label: "Overdue" %>
+
+<%= render "tasks", tasks: @today_tasks, label: "Today" %>
+
+<%= render "tasks", tasks: @future_tasks, label: "Future Tasks" %>
