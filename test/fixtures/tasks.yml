@@ -3,7 +3,7 @@
 one:
   title: MyString
   notes: MyText
-  due_date: 2022-11-01 02:41:21
+  due_date: 2022-11-01
   completed: false
   category: one
   user: one
@@ -11,7 +11,7 @@ one:
 two:
   title: MyString
   notes: MyText
-  due_date: 2022-11-01 02:41:21
+  due_date: 2022-11-01
   completed: false
   category: two
   user: two

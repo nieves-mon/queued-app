@@ -3,9 +3,13 @@ class TasksController < ApplicationController
     before_action :set_task, only: [:show, :edit, :update, :destroy]
 
     def index
-        @overdue_tasks = current_user.tasks.where("due_date < ?", Date.current)
-        @today_tasks = current_user.tasks.where("due_date = ?", Date.current)
-        @future_tasks = current_user.tasks.where("due_date > ?", Date.current)
+        tasks = current_user.tasks.where("completed = ?", false)
+
+        @overdue_tasks = tasks.where("due_date < ?", Date.current)
+        @today_tasks = tasks.where("due_date = ?", Date.current)
+        @future_tasks = tasks.where("due_date > ?", Date.current)
+
+        @completed_tasks = current_user.tasks.where("completed = ?", true)
     end
 
     def show

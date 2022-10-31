@@ -9,7 +9,6 @@
 <%= link_to "Add A Task", new_task_path %>
 
 <%= render "tasks", tasks: @overdue_tasks, label: "Overdue" %>
-
 <%= render "tasks", tasks: @today_tasks, label: "Today" %>
-
-<%= render "tasks", tasks: @future_tasks, label: "Future Tasks" %>
+<%= render "tasks", tasks: @future_tasks, label: "Future" %>
+<%= render "tasks", tasks: @completed_tasks, label: "Completed" %>
