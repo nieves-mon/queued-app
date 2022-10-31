@@ -1,5 +1,5 @@
 <%= form_with model: @category do |f| %>
-    <div>
+    <div class="field-row">
         <%= f.label :name %>
         <%= f.text_field :name %>
         <% category.errors.full_messages.each do |message| %>
@@ -8,6 +8,6 @@
     </div>
 
     <div>
-        <%= f.submit btn_label %>
+        <%= f.submit btn_label, class: 'btn' %>
     </div>
 <% end %>
