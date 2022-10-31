@@ -86,3 +86,11 @@
     color: $red;
     text-align: center;
 }
+
+.field_with_errors:nth-of-type(2) {
+    flex: auto;
+
+    input {
+        width: 100%;
+    }
+}

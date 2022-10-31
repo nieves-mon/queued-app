@@ -1,7 +1,9 @@
 <%= form_with model: @task do |f| %>
-    <% task.errors.full_messages.each do |message| %>
-        <div class="error"><%= message %></div>
-    <% end %>
+    <div class="field-col">
+        <% task.errors.full_messages.each do |message| %>
+            <div class="error"><%= message %></div>
+        <% end %>
+    </div>
 
     <div class="field-row">
         <%= f.label :title %>
