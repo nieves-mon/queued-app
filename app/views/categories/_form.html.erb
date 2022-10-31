@@ -1,10 +1,13 @@
 <%= form_with model: @category do |f| %>
-    <div class="field-row">
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+    <div class="field-col">
         <% category.errors.full_messages.each do |message| %>
             <div class="error"><%= message %></div>
         <% end %>
+    </div>
+
+    <div class="field-row">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
     </div>
 
     <div>

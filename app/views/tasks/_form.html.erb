@@ -6,41 +6,26 @@
     <div class="field-row">
         <%= f.label :title %>
         <%= f.text_field :title %>
-        <% task.errors.full_messages_for(:title).each do |message| %>
-            <div class="error"><%= message %></div>
-        <% end %>
     </div>
 
     <div class="field-row">
         <%= f.label :category_id %>
         <%= f.select :category_id, current_user.categories.reduce({}) { |hash, cat| hash[cat.name] = cat.id; hash } %>
-        <% task.errors.full_messages_for(:title).each do |message| %>
-            <div class="error"><%= message %></div>
-        <% end %>
     </div>
 
     <div class="field-col">
         <%= f.label :notes %>
         <%= f.text_area :notes %>
-        <% task.errors.full_messages_for(:notes).each do |message| %>
-            <div class="error"><%= message %></div>
-        <% end %>
     </div>
 
     <div class="field-row">
         <%= f.label :due_date %>
         <%= f.date_field :due_date, class: 'date-select' %>
-        <% task.errors.full_messages_for(:due_date).each do |message| %>
-            <div class="error"><%= message %></div>
-        <% end %>
     </div>
 
     <div class="field-row">
         <%= f.check_box :completed %>
         <%= f.label :completed %>
-        <% task.errors.full_messages_for(:completed).each do |message| %>
-            <div class="error"><%= message %></div>
-        <% end %>
     </div>
 
     <div>
