@@ -1,0 +1,81 @@
+@import './variables.scss';
+
+.form-container {
+    accent-color: none;
+    background: $gray;
+    border-radius: 10px;
+    color: white;
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 100%;
+
+    h1 {
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    textarea {
+        resize: none;
+        height: 5rem;
+        background: $light-gray;
+        border: none;
+    }
+
+    input,
+    textarea,
+    select {
+        color: $white;
+        padding: 0.3rem 0.5rem;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: none;
+    }
+
+    .btn {
+        color: white;
+        margin: 1rem auto 0;
+    }
+}
+
+.field-col,
+.field-row {
+    width: 100%;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+}
+
+.field-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    label {
+        width: fit-content;
+    }
+
+    input,
+    select {
+        border: none;
+        flex: 1;
+        background: $light-gray;
+    }
+
+    #task_completed {
+        accent-color: $yellow;
+        width: fit-content;
+        flex: 0;
+    }
+
+    .date-select {
+        width: fit-content;
+    }
+}
