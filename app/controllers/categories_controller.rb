@@ -7,10 +7,10 @@ class CategoriesController < ApplicationController
     end
 
     def show
-        @tasks = @category.tasks
-        @overdue_tasks = current_user.tasks.where("due_date < ?", Date.current)
-        @today_tasks = current_user.tasks.where("due_date = ?", Date.current)
-        @future_tasks = current_user.tasks.where("due_date > ?", Date.current)
+        tasks = @category.tasks
+        @overdue_tasks = tasks.where("due_date < ?", Date.current)
+        @today_tasks = tasks.where("due_date = ?", Date.current)
+        @future_tasks = tasks.where("due_date > ?", Date.current)
     end
 
     def new
