@@ -97,11 +97,11 @@
 }
 
 .cancel {
-    background: $red;
+    background: $red !important;
 }
 
 .cancel:hover {
     color: white;
-    background: $red;
+    background: $red !important;
     box-shadow: 3px 3px 4px #e34923a9;
 }

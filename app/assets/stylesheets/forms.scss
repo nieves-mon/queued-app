@@ -6,12 +6,23 @@
     border-radius: 10px;
     color: white;
     padding: 1.5rem;
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
 
-    h1 {
+    h1,
+    h2,
+    h3 {
         font-weight: 700;
         margin-bottom: 1rem;
+    }
+
+    h2,
+    h3 {
+        text-align: center;
+    }
+
+    label {
+        font-weight: 600;
     }
 
     textarea {
@@ -26,6 +37,8 @@
     select {
         color: $white;
         padding: 0.3rem 0.5rem;
+        background: $light-gray;
+        border: none;
     }
 
     input:focus,
@@ -38,13 +51,19 @@
         color: white;
         margin: 1rem auto 0;
     }
+
+    em,
+    i {
+        color: $white;
+        font-size: 0.9rem;
+    }
 }
 
 .field-col,
 .field-row {
     width: 100%;
     margin-bottom: 1rem;
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
 
 .field-col {
@@ -64,9 +83,7 @@
 
     input,
     select {
-        border: none;
         flex: 1;
-        background: $light-gray;
     }
 
     #task_completed {
@@ -92,5 +109,13 @@
 
     input {
         width: 100%;
+    }
+}
+
+.cancel-container {
+    margin-top: 2rem;
+
+    p {
+        text-align: center;
     }
 }
