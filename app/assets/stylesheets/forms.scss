@@ -121,9 +121,18 @@
 }
 
 .back-btn {
-    color: $light-red;
+    a {
+        color: $light-red;
+    }
+
+    margin: 0 auto 1rem;
 }
 
-.back-btn:hover {
+.back-btn.back-form {
+    display: block;
+    width: 450px;
+}
+
+.back-btn a:hover {
     color: rgb(255, 0, 0);
 }
