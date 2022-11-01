@@ -7,13 +7,13 @@ class CategoriesController < ApplicationController
     end
 
     def show
-        tasks = @category.tasks.where("completed = ?", false)
+        tasks = @category.tasks.where("completed = ?", false).order(:due_date)
 
         @overdue_tasks = tasks.where("due_date < ?", Date.current)
         @today_tasks = tasks.where("due_date = ?", Date.current)
         @future_tasks = tasks.where("due_date > ?", Date.current)
 
-        @completed_tasks = @category.tasks.where("completed = ?", true)
+        @completed_tasks = @category.tasks.where("completed = ?", true).order(due_date: :desc)
     end
 
     def new
