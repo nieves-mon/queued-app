@@ -9,7 +9,11 @@
         <%= form_with class: 'task-check-form', model: @task do |f| %>
             <%= f.check_box :completed, class: 'task-check' %>
         <% end %>
-        <span class="category">[<%= @task.category.name %>]</span>
+
+        <%= link_to category_path(@task.category), class: "category" do %>
+            [ <%= @task.category.name %> ]
+        <% end %>
+
         <h1><%= @task.title %></h1>
 
         <div class="task-header-actions">
