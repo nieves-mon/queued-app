@@ -37,7 +37,7 @@ class TasksController < ApplicationController
         if @task.update(task_params)
             flash[:success] = "Task updated successfully!"
 
-            if action_name == 'new' || action_name == 'edit'
+            if params[:commit] == "Update Task"
                 redirect_to @task
             else
                 redirect_back(fallback_location: root_path)
