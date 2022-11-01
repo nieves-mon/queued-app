@@ -17,15 +17,21 @@
             </p>
             <div class="task-actions">
                 <p class="task-action">
-                    <%= link_to "Show", task_path(task) %>
+                    <%= link_to task_path(task) do %>
+                        <i class="fa-solid fa-eye view-btn"></i>
+                    <% end %>
                 </p>
                 <p class="task-action">
-                    <%= link_to "Edit", edit_task_path(task) %>
+                    <%= link_to edit_task_path(task) do %>
+                        <i class="fa-solid fa-pencil edit-btn"></i>
+                    <% end %>
                 </p>
                 <p class="task-action">
-                    <%= link_to "Delete", task_path(task), method: :delete, data: {
-                        confirm: "Are you sure"
-                    } %>
+                    <%= link_to task_path(task), method: :delete, data: {
+                            confirm: "Are you sure"
+                    } do %>
+                        <i class="fa-solid fa-trash delete-btn"></i>
+                    <% end %>
                 </p>
             </div>
         </div>
