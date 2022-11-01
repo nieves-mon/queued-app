@@ -6,7 +6,7 @@ one:
   due_date: 2022-11-01
   completed: false
   category: one
-  user: one
+  user: user1
 
 two:
   title: MyString
@@ -14,4 +14,4 @@ two:
   due_date: 2022-11-01
   completed: false
   category: two
-  user: two
+  user: user2
