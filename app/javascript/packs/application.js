@@ -11,3 +11,22 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+document.addEventListener("DOMContentLoaded", () => {
+    addListenerToCheckbox();
+
+    document.addEventListener("change", () => {
+        addListenerToCheckbox();
+    })
+})
+
+function addListenerToCheckbox() {
+    const checkboxes = document.querySelectorAll('.task-check');
+    const forms = document.querySelectorAll('.task-check-form');
+
+    checkboxes.forEach((checkbox, i) => {
+        checkbox.addEventListener("change", () => {
+            forms[i].submit();
+        })
+    })
+}
