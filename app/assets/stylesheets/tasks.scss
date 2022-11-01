@@ -56,3 +56,28 @@
         }
     }
 }
+
+.task-show-container {
+    background: $gray;
+    border-radius: 10px;
+    color: white;
+    padding: 1rem;
+
+    .task-header {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .task-header-actions {
+            font-size: 1.5rem;
+        }
+    }
+}

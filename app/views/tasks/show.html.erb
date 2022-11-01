@@ -4,13 +4,23 @@
     <% end %>
 </div>
 
-<h1><%= @task.title %></h1>
-<h3>Category: <%= @task.category.name %></h3>
+<div class="task-show-container">
+    <div class="task-header">
+        <h1><%= @task.title %></h1>
 
-<h2>Due Date: <%= @task.due_date.strftime("%^a %b %d, %Y") %></h2>
-<p><%= @task.notes %></p>
+        <div class="task-header-actions">
+            <%= link_to edit_task_path(@task) do %>
+                <i class="fa-solid fa-pencil edit-btn action-btn"></i>
+            <% end %>
+            <%= link_to task_path(@task), method: :delete, data: {
+                    confirm: "Are you sure"
+            } do %>
+                <i class="fa-solid fa-trash delete-btn action-btn"></i>
+            <% end %>
+        </div>
+    </div>
+    <h3>Category: <%= @task.category.name %></h3>
 
-<%= link_to "Edit", edit_task_path(@task) %>
-<%= link_to "Delete", task_path(@task), method: :delete, data: {
-        confirm: "Are you sure"
-} %>
+    <h2>Due Date: <%= @task.due_date.strftime("%^a %b %d, %Y") %></h2>
+    <p><%= @task.notes %></p>
+</div>
