@@ -81,3 +81,12 @@
         }
     }
 }
+
+.completed {
+
+    .task-title,
+    .task-due-date {
+        color: rgba(255, 255, 255, 0.597);
+        text-decoration: line-through;
+    }
+}

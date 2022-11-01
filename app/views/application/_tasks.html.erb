@@ -2,13 +2,17 @@
 
 <div class="tasks-group">
     <% tasks.each do |task| %>
-        <div class="task-item">
+        <% if task.completed? %>
+            <div class="task-item completed">
+        <% else %>
+            <div class="task-item">
+        <% end %>
             <div class="task-label">
                 <%= form_with model: task do |f| %>
                     <%= f.check_box :completed%>
                 <% end %>
                 <h6 class="task-title">
-                    <%= task.title%>
+                    <%= task.title %>
                 </h6>
             </div>
             <p class="task-due-date">
