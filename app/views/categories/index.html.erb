@@ -20,7 +20,7 @@
                 <div class="card-links">
                     <%= link_to "Show", category_path(category), class: "card-link" %>
                     <%= link_to "Edit", edit_category_path(category), class: "card-link" %>
-                    <%= link_to "Delete", category_path(category), class: "card-link", method: :delete, data: {
+                    <%= link_to "Delete", category_path(category), class: "card-link delete-btn", method: :delete, data: {
                             confirm: "Are you sure?"
                         } %>
                 </div>
