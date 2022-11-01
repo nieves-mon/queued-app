@@ -13,6 +13,11 @@
     align-items: center;
     gap: 0.5rem;
     transition: 3ms ease-in-out;
+
+    .num-tasks {
+        color: $yellow;
+        font-size: 1.5rem;
+    }
 }
 
 .tasks-group {
