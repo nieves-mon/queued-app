@@ -14,9 +14,14 @@ ActiveStorage.start()
 
 document.addEventListener("DOMContentLoaded", () => {
     addListenerToCheckbox();
+    addListenerToDropdown();
 
     document.addEventListener("click", () => {
         addListenerToCheckbox();
+    })
+
+    document.addEventListener("change", () => {
+        addListenerToDropdown();
     })
 })
 
@@ -27,6 +32,18 @@ function addListenerToCheckbox() {
     checkboxes.forEach((checkbox, i) => {
         checkbox.addEventListener("change", () => {
             forms[i].submit();
+        })
+    })
+}
+
+function addListenerToDropdown() {
+    const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+    const taskGroups = document.querySelectorAll('.tasks-group');
+
+    dropdownBtns.forEach((dropdownBtn, i) => {
+        dropdownBtn.addEventListener("click", () => {
+            dropdownBtn.classList.toggle("hidden");
+            taskGroups[i].classList.toggle("hidden");
         })
     })
 }

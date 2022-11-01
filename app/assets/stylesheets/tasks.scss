@@ -4,6 +4,7 @@
 @import './variables.scss';
 
 .tasks-group-label {
+    border-bottom: 1px solid $white;
     color: white;
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -11,10 +12,15 @@
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
+    transition: 3ms ease-in-out;
 }
 
 .tasks-group {
     margin-bottom: 2rem;
+}
+
+.tasks-group.hidden {
+    display: none;
 }
 
 .task-item {
@@ -148,5 +154,15 @@
 }
 
 .dropdown-btn {
+    color: $white;
     font-size: 1.2rem;
+}
+
+.dropdown-btn:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-btn.hidden {
+    rotate: (180deg);
 }
