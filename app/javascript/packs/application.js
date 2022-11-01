@@ -15,7 +15,7 @@ ActiveStorage.start()
 document.addEventListener("DOMContentLoaded", () => {
     addListenerToCheckbox();
 
-    document.addEventListener("change", () => {
+    document.addEventListener("click", () => {
         addListenerToCheckbox();
     })
 })
