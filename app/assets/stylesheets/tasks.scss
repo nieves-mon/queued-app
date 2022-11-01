@@ -75,6 +75,14 @@
             margin: 0;
         }
     }
+
+    .no-tasks {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0;
+        grid-area: date;
+        text-align: center;
+    }
 }
 
 .task-show-container {

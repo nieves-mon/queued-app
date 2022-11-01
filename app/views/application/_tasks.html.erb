@@ -4,48 +4,54 @@
 </div>
 
 <div class="tasks-group">
-    <% tasks.each do |task| %>
-        <% if task.completed? %>
-            <div class="task-item task-completed">
-        <% else %>
-            <div class="task-item">
-        <% end %>
-            <div class="task-label">
-                <%= form_with class: 'task-check-form', model: task do |f| %>
-                    <%= f.check_box :completed, class: 'task-check' %>
-                <% end %>
-                <h6 class="task-title">
-                    <%= task.title %>
-                </h6>
-                <% if current_page?('/tasks') %>
-                    <%= link_to category_path(task.category), class: "task-category" do %>
-                        [ <%= task.category.name %> ]
-                    <% end %>
-                <% end %>
-            </div>
-            <p class="task-due-date">
-                <i class="fa-solid fa-calendar"></i>
-                <%= task.due_date.strftime("%^a %b %d, %Y") %>
-            </p>
-            <div class="task-actions">
-                <p class="task-action">
-                    <%= link_to task_path(task) do %>
-                        <i class="fa-solid fa-eye view-btn"></i>
-                    <% end %>
-                </p>
-                <p class="task-action">
-                    <%= link_to edit_task_path(task) do %>
-                        <i class="fa-solid fa-pencil edit-btn"></i>
-                    <% end %>
-                </p>
-                <p class="task-action">
-                    <%= link_to task_path(task), method: :delete, data: {
-                            confirm: "Are you sure"
-                    } do %>
-                        <i class="fa-solid fa-trash delete-btn"></i>
-                    <% end %>
-                </p>
-            </div>
+    <% if tasks.length == 0 %>
+        <div class="task-item">
+            <p class="no-tasks">No <%= label.downcase %> tasks</p>
         </div>
+    <% else %>
+        <% tasks.each do |task| %>
+            <% if task.completed? %>
+                <div class="task-item task-completed">
+            <% else %>
+                <div class="task-item">
+            <% end %>
+                <div class="task-label">
+                    <%= form_with class: 'task-check-form', model: task do |f| %>
+                        <%= f.check_box :completed, class: 'task-check' %>
+                    <% end %>
+                    <h6 class="task-title">
+                        <%= task.title %>
+                    </h6>
+                    <% if current_page?('/tasks') %>
+                        <%= link_to category_path(task.category), class: "task-category" do %>
+                            [ <%= task.category.name %> ]
+                        <% end %>
+                    <% end %>
+                </div>
+                <p class="task-due-date">
+                    <i class="fa-solid fa-calendar"></i>
+                    <%= task.due_date.strftime("%^a %b %d, %Y") %>
+                </p>
+                <div class="task-actions">
+                    <p class="task-action">
+                        <%= link_to task_path(task) do %>
+                            <i class="fa-solid fa-eye view-btn"></i>
+                        <% end %>
+                    </p>
+                    <p class="task-action">
+                        <%= link_to edit_task_path(task) do %>
+                            <i class="fa-solid fa-pencil edit-btn"></i>
+                        <% end %>
+                    </p>
+                    <p class="task-action">
+                        <%= link_to task_path(task), method: :delete, data: {
+                                confirm: "Are you sure"
+                        } do %>
+                            <i class="fa-solid fa-trash delete-btn"></i>
+                        <% end %>
+                    </p>
+                </div>
+            </div>
+        <% end %>
     <% end %>
 </div>
