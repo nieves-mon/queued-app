@@ -10,8 +10,8 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title"><%= category.name %></h5>
-                <h6 class="card-subtitle mb-2 <%= get_status(category)[:class] %>">
-                    <%= get_status(category)[:text] %>
+                <h6 class="card-subtitle mb-2 status <%= category_status(category)[:class] %>">
+                    <%= category_status(category)[:text] %>
                 </h6>
                 <p class="card-text">
                     <i class="fa-solid fa-list-check"></i>

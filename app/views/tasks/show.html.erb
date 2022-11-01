@@ -1,4 +1,4 @@
-<div class='back-btn'>
+<div class='back-btn task-back'>
     <%= link_to :back do %>
     <i class="fa-solid fa-arrow-left"></i> Back
     <% end %>
@@ -6,6 +6,7 @@
 
 <div class="task-show-container">
     <div class="task-header">
+        <span class="category">[<%= @task.category.name %>]</span>
         <h1><%= @task.title %></h1>
 
         <div class="task-header-actions">
@@ -19,8 +20,19 @@
             <% end %>
         </div>
     </div>
-    <h3>Category: <%= @task.category.name %></h3>
 
-    <h2>Due Date: <%= @task.due_date.strftime("%^a %b %d, %Y") %></h2>
-    <p><%= @task.notes %></p>
+    <div class="status-due-date">
+        <h6 class="status  <%= task_status(@task)[:class] %>">
+            <%= task_status(@task)[:text] %>
+        </h6>
+
+        <div class="due-date">
+            <i class="fa-solid fa-calendar"></i>
+            <%= @task.due_date.strftime("%^a %b %d, %Y") %>
+        </div>
+    </div>
+
+    <div class="notes">
+        <%= @task.notes.empty? ? "No notes" : @task.notes %>
+    </div>
 </div>

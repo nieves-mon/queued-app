@@ -62,13 +62,15 @@
     border-radius: 10px;
     color: white;
     padding: 1rem;
+    margin: 0 auto;
+    max-width: 50rem;
+    width: 100%;
 
     .task-header {
         display: flex;
         flex-direction: row;
         gap: 1rem;
         align-items: center;
-        margin-bottom: 1rem;
 
         h1 {
             margin: 0;
@@ -79,14 +81,46 @@
         .task-header-actions {
             font-size: 1.5rem;
         }
+
+        .category {
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+    }
+
+    .status {
+        font-size: 1.3rem;
+        border-radius: 15px;
+        margin: 0;
+        padding: 0.3rem 0.7rem;
+        width: fit-content;
+    }
+
+    .status-due-date {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        margin: 0.2rem 0 1rem;
+    }
+
+    .notes {
+        background: $light-gray;
+        padding: 0.5rem 1rem;
     }
 }
 
-.completed {
+.task-completed {
 
     .task-title,
     .task-due-date {
         color: rgba(255, 255, 255, 0.597);
         text-decoration: line-through;
     }
+}
+
+.task-back {
+    display: block;
+    max-width: 50rem;
+    width: 100%;
 }

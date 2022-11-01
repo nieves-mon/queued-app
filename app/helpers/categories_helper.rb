@@ -1,5 +1,5 @@
 module CategoriesHelper
-    def get_status(category)
+    def category_status(category)
       tasks = category.tasks
 
       if tasks.where(due_date: ...Date.current, completed: false).any?
@@ -7,7 +7,7 @@ module CategoriesHelper
       elsif tasks.where(completed: false).any?
         {class: 'pending', text: 'Still got some work to do'}
       else
-        {class: 'finished', text: "You're all good here :D"}
+        {class: 'completed', text: "You're all good here :D"}
       end
     end
 end
