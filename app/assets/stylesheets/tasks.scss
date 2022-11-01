@@ -33,8 +33,18 @@
     }
 
     .task-title {
+        font-weight: 700;
         font-size: 1.2rem;
         margin: 0;
+    }
+
+    .task-category {
+        font-style: italic;
+        color: $dark-yellow;
+    }
+
+    .task-category:hover {
+        color: $yellow;
     }
 
     .task-due-date {
