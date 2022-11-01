@@ -10,7 +10,7 @@ one:
 
 two:
   title: MyTaskTwo
-  notes:
+  notes: MyTaskNotesTwo
   due_date: 2022-11-01
   completed: false
   category: two
