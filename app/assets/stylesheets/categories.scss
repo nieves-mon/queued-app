@@ -88,3 +88,43 @@
     background: rgba(0, 128, 0, 0.1);
     border: 2px solid green;
 }
+
+.category-header-container {
+    background: $gray;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    h1 {
+        color: white;
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .btn {
+        color: white !important;
+        margin: 1rem 0 0;
+    }
+
+    .category-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .actions {
+        font-size: 1.5rem;
+        display: flex;
+        gap: 0.5rem;
+    }
+}
+
+.delete-btn {
+    color: $light-red;
+}
+
+.delete-btn:hover {
+    color: $red;
+}
