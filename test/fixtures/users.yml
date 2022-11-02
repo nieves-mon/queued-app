@@ -6,10 +6,8 @@
 #
 user1:
   email: user1@example.org
-  encrypted_password: encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 user2:
   email: user2@email.com
-  encrypted_password: encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 # column: value

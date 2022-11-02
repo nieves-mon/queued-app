@@ -3,11 +3,11 @@ class TasksController < ApplicationController
     before_action :set_task, only: [:show, :edit, :update, :destroy]
 
     def index
-        tasks = current_user.tasks.where("completed = ?", false).order(:due_date)
+        pending_tasks = current_user.tasks.where("completed = ?", false).order(:due_date)
 
-        @overdue_tasks = tasks.where("due_date < ?", Date.current)
-        @today_tasks = tasks.where("due_date = ?", Date.current)
-        @future_tasks = tasks.where("due_date > ?", Date.current)
+        @overdue_tasks = pending_tasks.where("due_date < ?", Date.current)
+        @today_tasks = pending_tasks.where("due_date = ?", Date.current)
+        @future_tasks = pending_tasks.where("due_date > ?", Date.current)
 
         @completed_tasks = current_user.tasks.where("completed = ?", true).order(due_date: :desc)
     end
@@ -16,7 +16,12 @@ class TasksController < ApplicationController
     end
 
     def new
-        @task = Task.new
+        if current_user.categories.any?
+            @task = Task.new
+        else
+            flash[:info] = "Must have atleast one category before adding a task"
+            redirect_back(fallback_location: root_path)
+        end
     end
 
     def create

@@ -1,16 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyTaskOne
-  notes: MyTaskNotesOne
+  title: My Task One
+  notes: My Task Notes One
   due_date: 2022-11-01
   completed: false
   category: one
   user: user1
 
 two:
-  title: MyTaskTwo
-  notes:
+  title: My Task Two
+  notes: My Task Notes Two
   due_date: 2022-11-01
   completed: false
   category: two
