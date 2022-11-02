@@ -16,7 +16,12 @@ class TasksController < ApplicationController
     end
 
     def new
-        @task = Task.new
+        if current_user.categories.any?
+            @task = Task.new
+        else
+            flash[:info] = "Must have atleast one category before adding a task"
+            redirect_back(fallback_location: root_path)
+        end
     end
 
     def create

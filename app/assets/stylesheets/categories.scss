@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import './variables.scss';
 
+.no-categories {
+    color: $white;
+    font-size: 3rem;
+}
+
 .btn {
     background: $yellow !important;
     color: white;

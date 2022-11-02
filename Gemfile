@@ -57,3 +57,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use Devise for authentication
 gem 'devise', '~> 4.2'
+
+gem 'net-smtp', require: false
