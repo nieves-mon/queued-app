@@ -49,7 +49,7 @@
 
       <div class="main-container">
         <% flash.each do |key, value| %>
-          <div class="alert alert-<%= key %> alert-dismissible" role="alert">
+          <div class="alert alert-<%= key == 'notice' ? 'info' : key %> alert-dismissible" role="alert">
             <%= value %>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
