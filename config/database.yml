@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: queued_app_production
   username: queued_app
   password: <%= ENV['QUEUED_APP_DATABASE_PASSWORD'] %>
