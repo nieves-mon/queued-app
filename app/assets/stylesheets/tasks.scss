@@ -116,17 +116,17 @@
             margin-left: 1rem;
         }
 
-        .category {
-            color: $white;
-            font-size: 2rem;
-            font-weight: 500;
-        }
-
         .task-check {
             accent-color: $yellow;
             margin-left: 0.5rem;
             transform: scale(2);
         }
+    }
+
+    .category {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 500;
     }
 
     .status {
