@@ -34,7 +34,7 @@
                   <%= link_to "Tasks", tasks_path, class: current_page?("/tasks") ? "nav-link active" : "nav-link" %>
                 </li>
                 <li class="nav-item right">
-                  <%= link_to edit_user_registration_path, class: current_page?("/users/edit") ? "nav-link welcome-user active" : "nav-link welcome-user" do %>
+                  <%= link_to edit_user_registration_path, title: "User Profile", class: current_page?("/users/edit") ? "nav-link welcome-user active" : "nav-link welcome-user" do %>
                     <i class="fa-solid fa-circle-user"></i>
                     <span>Welcome, <%= current_user.email %>!</span>
                   <% end %>

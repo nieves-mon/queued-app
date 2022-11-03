@@ -53,7 +53,8 @@ class TasksController < ApplicationController
 
     def destroy
         @task.destroy
-        redirect_to category_url(@task.category)
+        flash[:info] = "Task deleted successfully!"
+        redirect_back(fallback_location: root_path)
     end
 
     private
