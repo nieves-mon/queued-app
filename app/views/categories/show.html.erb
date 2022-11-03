@@ -13,7 +13,7 @@
                 <i class="fa-solid fa-pencil edit-btn action-btn"></i>
             <% end %>
             <%= link_to category_path(@category), method: :delete, data: {
-                    confirm: "Are you sure?"
+                    confirm: "This will also delete all tasks in this category. Would you like to proceed?"
                 } do %>
                 <i class="fa-solid fa-trash delete-btn action-btn"></i>
             <% end %>
