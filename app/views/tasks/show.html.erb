@@ -6,11 +6,13 @@
 
 <div class="task-show-container">
     <div class="task-header">
-        <%= form_with class: 'task-check-form', model: @task do |f| %>
-            <%= f.check_box :completed, class: 'task-check' %>
-        <% end %>
+        <div class="task-header-main"?
+            <%= form_with class: 'task-check-form', model: @task do |f| %>
+                <%= f.check_box :completed, class: 'task-check' %>
+            <% end %>
 
-        <h1><%= @task.title %></h1>
+            <h1><%= @task.title %></h1>
+        </div>
 
         <div class="task-header-actions">
             <%= link_to edit_task_path(@task) do %>

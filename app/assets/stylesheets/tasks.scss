@@ -107,6 +107,12 @@
         align-content: center;
         flex-wrap: wrap;
 
+        .task-header-main {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 1rem;
+        }
+
         h1 {
             margin: 0;
             font-size: 3rem;
@@ -169,7 +175,7 @@
 
 .task-back {
     display: block;
-    max-width: 50rem;
+    max-width: 60rem;
     width: 100%;
 }
 
@@ -186,3 +192,45 @@
 // .dropdown-btn.hidden {
 //     rotate: (180deg);
 // }
+
+@media screen and (max-width: 1321px) {
+    .task-item {
+        grid-template-columns: 2.4fr 0.6fr;
+        grid-template-areas: "label actions";
+
+        .task-due-date {
+            display: none;
+        }
+
+        .no-tasks {
+            grid-area: label;
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (max-width: 703px) {
+    .task-show-container {
+        .task-header {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .task-header-actions {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .task-subheader {
+        .category {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 589px) {
+    .task-category {
+        display: none;
+    }
+}
