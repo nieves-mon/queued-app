@@ -32,12 +32,12 @@ class CategoriesTest < ApplicationSystemTestCase
 
     click_on "Edit", match: :first
 
-    fill_in "Name", with: "Updated Category One"
+    fill_in "Name", with: "Updated"
 
     click_on "Update Category"
 
     assert_text "Category updated successfully!"
-    assert_text "Updated Category One"
+    assert_text "Updated"
   end
 
   test "destroying a category" do

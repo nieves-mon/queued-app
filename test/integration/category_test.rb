@@ -78,10 +78,10 @@ class CategoryTest < ActionDispatch::IntegrationTest
 
   test "should update category and redirect" do
     assert_difference "Category.count", 0 do
-      patch category_path(@category1), params: {category: {name: "New Category One"}}
+      patch category_path(@category1), params: {category: {name: "Updated"}}
     end
 
-    assert_equal(Category.find(@category1.id).name, "New Category One")
+    assert_equal(Category.find(@category1.id).name, "Updated")
     assert_response :redirect
   end
 
