@@ -10,10 +10,6 @@
             <%= f.check_box :completed, class: 'task-check' %>
         <% end %>
 
-        <%= link_to category_path(@task.category), class: "category" do %>
-            [ <%= @task.category.name %> ]
-        <% end %>
-
         <h1><%= @task.title %></h1>
 
         <div class="task-header-actions">
@@ -26,6 +22,12 @@
                 <i class="fa-solid fa-trash delete-btn action-btn"></i>
             <% end %>
         </div>
+    </div>
+
+    <div class="task-subheader">
+        <%= link_to category_path(@task.category), class: "category" do %>
+            [ <%= @task.category.name %> ]
+        <% end %>
     </div>
 
     <div class="status-due-date">

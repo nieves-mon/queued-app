@@ -104,6 +104,8 @@
         flex-direction: row;
         gap: 1rem;
         align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
 
         h1 {
             margin: 0;
@@ -121,12 +123,6 @@
             margin-left: 0.5rem;
             transform: scale(2);
         }
-    }
-
-    .category {
-        color: $white;
-        font-size: 2rem;
-        font-weight: 500;
     }
 
     .status {
@@ -148,6 +144,17 @@
     .notes {
         background: $light-gray;
         padding: 0.5rem 1rem;
+    }
+}
+
+.task-subheader {
+    margin-bottom: 1rem;
+
+    .category {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 500;
+        font-style: italic;
     }
 }
 
