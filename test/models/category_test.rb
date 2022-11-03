@@ -19,6 +19,18 @@ class CategoryTest < ActiveSupport::TestCase
     assert_not result, "Category saved without name"
   end
 
+  test "should not save with name less than 2 characters" do
+    category = Category.new(name: 'T', user: @user2)
+    result = category.save
+    assert_not result, "Category saved with name of less than 2 characters"
+  end
+
+  test "should not save with name more than 15 characters" do
+    category = Category.new(name: 'TestCategoryName', user: @user2)
+    result = category.save
+    assert_not result, "Category saved with name of more than 15 characters"
+  end
+
   test "should not save without user" do
     category = Category.new(name: 'name', user: nil)
     result = category.save
