@@ -12,6 +12,12 @@ class TaskTest < ActiveSupport::TestCase
     assert result, "Task did not save with complete attributes"
   end
 
+  test "should save task without notes" do
+    task = Task.new(title: 'title', notes: nil, due_date: '2022-11-10', completed: false, category: @category1, user: @user1)
+    result = task.save
+    assert result, "Task did not save with complete attributes"
+  end
+
   test "should not save task without title" do
     task = Task.new(title: nil, notes: 'notes', due_date: '2022-11-10', completed: false, category: @category1, user: @user1)
     result = task.save
