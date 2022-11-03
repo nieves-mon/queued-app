@@ -7,7 +7,7 @@
 
     <div class="field-row">
         <%= f.label :title %>
-        <%= f.text_field :title %>
+        <%= f.text_field :title, minlength: 2, maxlength: 25 %>
     </div>
 
     <div class="field-row">
