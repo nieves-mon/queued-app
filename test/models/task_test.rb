@@ -24,6 +24,18 @@ class TaskTest < ActiveSupport::TestCase
     assert_not result, "Task saved without title"
   end
 
+  test "should not save task with title that is less than 2 characters" do
+    task = Task.new(title: 'T', notes: 'notes', due_date: '2022-11-10', completed: false, category: @category1, user: @user1)
+    result = task.save
+    assert_not result, "Task saved without title"
+  end
+
+  test "should not save task with title that is more than 25 characters" do
+    task = Task.new(title: 'TestTaskSampleTestTaskSample', notes: 'notes', due_date: '2022-11-10', completed: false, category: @category1, user: @user1)
+    result = task.save
+    assert_not result, "Task saved without title"
+  end
+
   test "should not save task without due_date" do
     task = Task.new(title: 'title', notes: 'notes', due_date: nil, completed: false, category: @category1, user: @user1)
     result = task.save
