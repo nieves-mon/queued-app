@@ -46,7 +46,6 @@ class TasksTest < ApplicationSystemTestCase
 
     fill_in "Title", with: "My Updated Task One"
     fill_in "Notes", with: "My Updated Task One Notes"
-    fill_in "Due date", with: '11-11-2022'
     check "Completed"
 
     click_on "Update Task"
